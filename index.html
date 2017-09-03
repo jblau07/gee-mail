@@ -1,13 +1,76 @@
 <html>
 	<head>
 		<script src="js/mail-generator.js"></script>
+		<title>GeeMail</title>
 		<link href="css/style.css" rel="stylesheet" media="screen">
+		<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
     <script>
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
+
+       for(var i=0; i<geemails.length; i++){
         
-      };
+        var mainBox = 
+        document.createElement("div");
+        mainBox.className = "title";
+        document.getElementById("main").appendChild(mainBox);
+
+        
+        var senderBox = document.createElement("div");
+        senderBox.className = "senderID";
+        senderBox.id = "same";
+        senderBox.innerHTML = geemails[i].sender;
+        mainBox.appendChild(senderBox);
+
+        var subjectBox = document.createElement("div");
+        subjectBox.classname = "subjectID";
+        subjectBox.id = "same";
+        subjectBox.innerHTML = geemails[i].subject;
+        mainBox.appendChild(subjectBox);
+
+       
+		var dateBox = document.createElement("div");
+        dateBox.className = "dateID";
+        dateBox.innerHTML = geemails[i].date;
+        mainBox.appendChild(dateBox);
+
+        var bodyBox = document.createElement("div");
+        bodyBox.className = "bodyID";
+        bodyBox.innerHTML = geemails[i].body;
+		senderBox.appendChild(bodyBox);
+
+    
+
+     }
+
+        var forAll = document.getElementsByClassName("senderID");
+        for (var j = 0; j<forAll.length; j++){
+        	forAll[j].addEventListener("click", showHidden);
+
+        }
+
+        function showHidden(){
+        	var hiddenElem1 = this.querySelectorAll(".bodyID")[0];
+        if(hiddenElem1.style.display === "none"){
+        	hiddenElem1.style.display = "block";
+        }else{
+        	hiddenElem1.style.display ="none";
+        
+        }
+        }
+	 	
+
+	 	
+
+	 	//var inboxCount = document.createElement("div");
+	 	//inboxCount.className = "number";
+	 	//inboxCount.innerHTML = "E-mail Count:  " + window.//geemails[i].length;
+	 	//main.appendChild(inboxCount);
+
+	 };
+      
     </script>
 	</head>
 	<body>
