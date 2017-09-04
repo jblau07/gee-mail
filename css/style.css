@@ -21,11 +21,12 @@ body{
 }
    
 
-.title{
+.dateID{
 
 border-width: 2px;
    border-bottom: 1.5px black solid;
    padding-bottom: 10px;
+   font-style: italic;
 }
 
 .senderID{
@@ -36,3 +37,22 @@ border-width: 2px;
 	display:none;
 	font-weight: normal;
 }
+
+.newBodyID{
+	display:none;
+	font-weight: normal;
+}
+
+.number{
+	color: green;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+h1{
+	text-align: center;;
+	font-family: 'Cinzel', serif;
+
+	}

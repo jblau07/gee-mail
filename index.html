@@ -4,6 +4,9 @@
 		<title>GeeMail</title>
 		<link href="css/style.css" rel="stylesheet" media="screen">
 		<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu|Cinzel" rel="stylesheet">
+
+
 
     <script>
       window.onload = function(){
@@ -41,8 +44,6 @@
         bodyBox.innerHTML = geemails[i].body;
 		senderBox.appendChild(bodyBox);
 
-    
-
      }
 
         var forAll = document.getElementsByClassName("senderID");
@@ -61,13 +62,52 @@
         }
         }
 	 	
+	 	var count = geemails.length;
 
+	 	var inboxCount = document.createElement("div");
+	 	inboxCount.className = "number";
+	 	inboxCount.innerHTML = "E-mail Count:  " + count;
+	 	main.appendChild(inboxCount);
 	 	
 
-	 	//var inboxCount = document.createElement("div");
-	 	//inboxCount.className = "number";
-	 	//inboxCount.innerHTML = "E-mail Count:  " + window.//geemails[i].length;
-	 	//main.appendChild(inboxCount);
+	 	var add1 = getNewMessage();
+
+	 	console.log(add1);
+
+	 	
+		function addMessage(){
+
+		
+		var newSenderBox = document.createElement("div");
+        newSenderBox.className = "senderID";
+        newSenderBox.id = "same";
+        newSenderBox.innerHTML = add1.sender;
+        main.appendChild(newSenderBox);
+
+        var newSubjectBox = document.createElement("div");
+        newSubjectBox.classname = "subjectID";
+        newSubjectBox.id = "same";
+        newSubjectBox.innerHTML = add1.subject;
+        main.appendChild(newSubjectBox);
+
+       
+		var newDateBox = document.createElement("div");
+        newDateBox.className = "dateID";
+        newDateBox.innerHTML = add1.date;
+        main.appendChild(newDateBox);
+
+        var newBodyBox = document.createElement("div");
+        newBodyBox.className = "bodyID";
+        newBodyBox.innerHTML = add1.body;
+		newSenderBox.appendChild(newBodyBox);
+
+		}
+
+		console.log(addMessage);
+
+		setInterval(addMessage, 7000);
+
+	console.log(count);
 
 	 };
       
@@ -75,7 +115,7 @@
 	</head>
 	<body>
 		<div class="container" id="main">
-			Build Me!
+			<h1>GeeMail</h1>
 		</div>
 	</body>
 </html>
