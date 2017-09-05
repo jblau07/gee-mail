@@ -63,10 +63,12 @@
         }
 	 	
 	 	var count = geemails.length;
+	 	
 
 	 	var inboxCount = document.createElement("div");
 	 	inboxCount.className = "number";
-	 	inboxCount.innerHTML = "E-mail Count:  " + count;
+	 	inboxCount.innerHTML = "E-mail Count: " + count;
+	 	//inboxCount.innerHTML = "E-mail Count:  " + count;
 	 	main.appendChild(inboxCount);
 	 	
 
@@ -101,7 +103,16 @@
         newBodyBox.innerHTML = add1.body;
 		newSenderBox.appendChild(newBodyBox);
 
+		var count2 = geemails.length++ +1;
+
+		inboxCount.innerHTML = "E-mail Count: " + count2;
+
+		var forAll = document.getElementsByClassName("senderID");
+        for (var j = 0; j<forAll.length; j++){
+        	forAll[j].addEventListener("click", showHidden);
+
 		}
+	}
 
 		console.log(addMessage);
 
@@ -115,7 +126,8 @@
 	</head>
 	<body>
 		<div class="container" id="main">
-			<h1>GeeMail</h1>
+			<h1>GeeMail<img src="images/envelope.png">
+			</h1>
 		</div>
 	</body>
 </html>

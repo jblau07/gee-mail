@@ -48,6 +48,8 @@ border-width: 2px;
 	font-weight: bold;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	position: relative;
+    left: 330px;
 }
 
 
@@ -56,3 +58,10 @@ h1{
 	font-family: 'Cinzel', serif;
 
 	}
+
+img{
+	padding-top: 5px;
+	padding-left: 10px;
+	height: 50px;
+    width: 60px;
+}
