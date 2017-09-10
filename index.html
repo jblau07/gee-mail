@@ -41,6 +41,7 @@
 
         var bodyBox = document.createElement("div");
         bodyBox.className = "bodyID";
+        bodyBox.style.display = 'none';
         bodyBox.innerHTML = geemails[i].body;
 		senderBox.appendChild(bodyBox);
 
@@ -54,7 +55,7 @@
 
         function showHidden(){
         	var hiddenElem1 = this.querySelectorAll(".bodyID")[0];
-        if(hiddenElem1.style.display === "none"){
+        if(hiddenElem1.style.display == "none"){
         	hiddenElem1.style.display = "block";
         }else{
         	hiddenElem1.style.display ="none";
@@ -100,6 +101,7 @@
 
         var newBodyBox = document.createElement("div");
         newBodyBox.className = "bodyID";
+        newBodyBox.style.display = 'none';
         newBodyBox.innerHTML = add1.body;
 		newSenderBox.appendChild(newBodyBox);
 
